@@ -1,4 +1,4 @@
-![Screenshot](https://github.com/Komodo/Projects-Scope/blob/master/screenshot.png?raw=true)
+![Screenshot](screenshot.png)
 
 This adds a new search scope to Commando allowing you to easily access your
 most recently used projects.
