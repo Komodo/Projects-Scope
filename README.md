@@ -4,13 +4,13 @@ This adds a new search scope to Commando allowing you to easily access your
 most recently used projects.
 
 Note by default Komodo only saves your 15 most recently used projects, to change
-this number you can set the "mruProjectList" preference to whataver value you
+this number you can set the "mruProjectSize" preference to whataver value you
 prefer.
 
 eg.
 
 ```
-require("ko/prefs").setLong("mruProjectList", 100);
+require("ko/prefs").setLong("mruProjectSize", 100);
 ```
 
 If you are a long time Komodo user you're likely still using the old default, which
