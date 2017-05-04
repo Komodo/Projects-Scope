@@ -8,7 +8,7 @@ function loadIntoWindow(window) {
         commando.registerScope("scope-projects", {
             name: "Projects",
             description: "Load recently used Projects",
-            icon: "koicon://ko-svg/chrome/icomoon/skin/box.svg",
+            icon: "koicon://ko-svg/chrome/icomoon/skin/box.svg?size=16",
             handler: "scope-projects/projects"
         });
     } catch (e) {

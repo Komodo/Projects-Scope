@@ -1,6 +1,7 @@
 (function() {
     const log       = require("ko/logging").getLogger("commando-scope-projects")
     const {Cc, Ci}  = require("chrome");
+    const commando  = require('commando/commando');
 
     //log.setLevel(require("ko/logging").LOG_DEBUG);
 
@@ -27,7 +28,8 @@
                 id: uri,
                 name: ioFile.basename(path),
                 description: ioFile.dirname(path),
-                icon: "koicon://ko-svg/chrome/icomoon/skin/box.svg",
+                icon: "koicon://ko-svg/chrome/icomoon/skin/box.svg?size=14",
+                classList: 'small-icon',
                 scope: "scope-projects",
                 allowMultiSelect: false
             });
@@ -54,7 +56,7 @@
 
         // Return results to commando
         if (results.length)
-            require("commando/commando").renderResults(results, uuid);
+            commando.renderResults(results, uuid);
 
         // Let commando know we're done
         onComplete();
@@ -69,7 +71,7 @@
         ko.projects.open(selected.resultData.id);
 
         // Close Commando, we don't need it anymore
-        require("commando/commando").hideCommando();
+        commando.hide();
     }
 
 }).apply(module.exports);
