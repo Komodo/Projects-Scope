@@ -4,7 +4,7 @@
     <Description about="urn:mozilla:install-manifest">
         <em:id>scope-projects@activestate.com</em:id>
         <em:name>Commando Scope - Projects</em:name>
-        <em:version>1.0</em:version>
+        <em:version>1.0.1</em:version>
         <em:description>Searches through recently used Projects</em:description>
         <em:creator>Nathan Rijksen</em:creator>
         <em:homepageURL>http://www.activestate.com/komodo-ide</em:homepageURL>
