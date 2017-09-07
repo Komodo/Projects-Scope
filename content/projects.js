@@ -2,6 +2,8 @@
     const log       = require("ko/logging").getLogger("commando-scope-projects")
     const {Cc, Ci}  = require("chrome");
     const commando  = require('commando/commando');
+    const _window   = require('ko/windows').getMain();
+    const legacy    = _window.ko;
 
     //log.setLevel(require("ko/logging").LOG_DEBUG);
 
@@ -22,7 +24,7 @@
         for (let x=0;x<projects.length;x++)
         {
             var uri = projects.getString(x)
-            var path = ko.uriparse.URIToPath(uri);
+            var path = legacy.uriparse.URIToPath(uri);
             
             results.push({
                 id: uri,
@@ -68,7 +70,7 @@
         
         // Open the first selected item
         var selected = selectedItems.slice(0,1)[0];
-        ko.projects.open(selected.resultData.id);
+        legacy.projects.open(selected.resultData.id);
 
         // Close Commando, we don't need it anymore
         commando.hide();
